@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9094e4b9-4823-4c3a-a05a-531a2cd867ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/InputParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/MDPSolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/TreeSolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/dto/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/dto/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/dto/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/dto/Args.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nyu/edu/InputParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/InputParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nyu/edu/MDPSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/MDPSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nyu/edu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nyu/edu/TreeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/TreeSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nyu/edu/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nyu/edu/dto/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/dto/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nyu/edu/dto/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nyu/edu/dto/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +56,8 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
   <component name="RunManager">
@@ -93,7 +89,11 @@
       <option name="presentableId" value="Default" />
       <updated>1668389701070</updated>
       <workItem from="1668389702276" duration="9344000" />
-      <workItem from="1668537920744" duration="6169000" />
+      <workItem from="1668537920744" duration="6342000" />
+      <workItem from="1668575837917" duration="7102000" />
+      <workItem from="1668614320235" duration="6485000" />
+      <workItem from="1668659750548" duration="2377000" />
+      <workItem from="1668700182748" duration="4768000" />
     </task>
     <servers />
   </component>
@@ -120,14 +120,44 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/Util.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/InputParser.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/Util.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/InputParser.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/InputParser.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/MDPSolver.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/MDPSolver.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/MDPSolver.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/MDPSolver.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/nyu/edu/MDPSolver.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

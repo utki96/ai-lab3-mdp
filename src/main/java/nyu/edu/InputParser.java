@@ -29,9 +29,13 @@ public class InputParser {
                 }
             }
             // For node having a single edge or missing probability values for edges
-            if (edges.size() == 1 || isProbMissing) {
-                node.setDecisionNode(true);
-                node.setAlpha(1.0);
+            if (isProbMissing) {
+                if (edges.size() == 1) {
+                    edges.get(0).setWeight(Constants.DEFAULT_WEIGHT);
+                } else if (node.getAlpha() == 0.0) {
+                    node.setDecisionNode(true);
+                    node.setAlpha(1.0);
+                }
             }
         }
     }
@@ -66,6 +70,8 @@ public class InputParser {
         }
         Node node = nodeMap.getOrDefault(label, new Node(label));
         node.setReward(reward);
+        node.setCurrValue(reward);
+        node.setPreviousValue(reward);
         nodeMap.put(label, node);
         graph.put(node, graph.getOrDefault(node, new ArrayList<>()));
     }
@@ -103,7 +109,7 @@ public class InputParser {
         }
         List<Edge> edges = graph.get(node);
         if (edges.isEmpty()) {
-            throw new RuntimeException("No edges to assign probabilities for node: " + node + ", instruction: " + instruction);
+            throw new RuntimeException("No edges to assign probabilities for node: " + node.getLabel() + ", instruction: " + instruction);
         }
         String[] probValues = instruction.substring(instruction.indexOf(Constants.WEIGHT_DELIM) + 1).trim().split(Constants.WEIGHT_SPLIT_DELIM);
         List<Double> values = new ArrayList<>();
@@ -119,18 +125,22 @@ public class InputParser {
                 values.add(value);
             }
         }
-        // TODO: Make sure probs sum to 1.0
         if (values.size() < 1) {
-            throw new RuntimeException("No values to assign probabilities for node: " + node + ", instruction: " + instruction);
+            throw new RuntimeException("No values to assign probabilities for node: " + node.getLabel() + ", instruction: " + instruction);
         } else if (values.size() == 1) {
             node.setDecisionNode(true);
             node.setAlpha(values.get(0));
         } else if (values.size() == edges.size()) {
+            double sum = 0.0;
             for (int index = 0; index < values.size(); index++) {
                 edges.get(index).setWeight(values.get(index));
+                sum += values.get(index);
+            }
+            if (Util.abs(Double.compare(sum, 1.0)) > 0.01) {
+                throw new RuntimeException("Probabilities do not sum up to 1.0 for node: " + node.getLabel() + ", instruction: " + instruction);
             }
         } else {
-            throw new RuntimeException("Inconsistent count of edges and probabilities for node: " + node + ", instruction: " + instruction);
+            throw new RuntimeException("Inconsistent count of edges and probabilities for node: " + node.getLabel() + ", instruction: " + instruction);
         }
     }
 

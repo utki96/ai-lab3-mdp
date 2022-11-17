@@ -2,12 +2,6 @@ package nyu.edu.dto;
 
 public class Node {
 
-    public Node() {
-        this.reward = 0.0;
-        this.currValue = 0.0;
-        this.previousValue = 0.0;
-    }
-
     public Node(String label) {
         this.label = label;
         this.reward = 0.0;
@@ -25,10 +19,6 @@ public class Node {
 
     public String getLabel() {
         return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
     }
 
     public double getPreviousValue() {
@@ -81,6 +71,7 @@ public class Node {
 
     @Override
     public String toString() {
-        return String.format("%s : Reward = %f, Value = %f", this.label, this.reward, this.currValue);
+        return String.format("%s : Reward = %f, Value = %f, Alpha = %f, policy = %s, decisionNode = %b",
+                this.label, this.reward, this.currValue, this.alpha, this.policyMove != null ? this.policyMove.label : null, this.isDecisionNode);
     }
 }

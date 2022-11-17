@@ -25,7 +25,6 @@ public class Util {
     }
 
     private static boolean isCycleDFS(Map<Node, List<Edge>> graph, Node node, Set<Node> checked, Set<Node> recStack) {
-        System.out.println(node.getLabel() + " -> ");
         if (recStack.contains(node)) {
             return true;
         }
@@ -64,5 +63,27 @@ public class Util {
             throw new RuntimeException("More than one root found in the Decision Network. Please check input.");
         }
         return root;
+    }
+
+    public static int compareDoubleValues(double v1, double v2) {
+        if (Double.compare(v1, v2) > 0.0) {
+            return 1;
+        } else if (Double.compare(v1, v2) < 0.0) {
+            return -1;
+        }
+        return 0;
+    }
+
+    public static double abs(double d) {
+        return d < 0 ? -d : d;
+    }
+
+    public static double parseDoubleFromInput(String arg) {
+        try {
+            String val = arg.substring(arg.indexOf("=") + 1).trim();
+            return Double.parseDouble(val);
+        } catch (Exception ex) {
+            throw new RuntimeException("Failed to parse value or arg: " + arg + ". Error: " + ex.getMessage());
+        }
     }
 }

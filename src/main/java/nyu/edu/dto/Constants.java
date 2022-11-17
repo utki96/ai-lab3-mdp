@@ -17,4 +17,6 @@ public class Constants {
     public static final String EDGES_DELIM = ",";
 
     public static final String WEIGHT_SPLIT_DELIM = " ";
+
+    public static final double DEFAULT_WEIGHT = 1.0;
 }
